@@ -111,7 +111,7 @@ author:
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:yko22222@gmail.com
     - label: "GitHub"
-      icon: "fas fa-fw fa-github"
+      icon: "fab fa-fw fa-github"
       url: "https://github.com/yunkio"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
