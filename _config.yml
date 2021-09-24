@@ -102,7 +102,7 @@ analytics:
 # Site Author
 author:
   name             : "윤기오"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/profile.jpg" # path of avatar image, e.g. "/assets/images/profile.jpg"
   bio              : "데이터 분석을 공부하고 있습니다."
   location         : "Korea University SPS Lab."
   email            : "yko22222@gmail.com"
