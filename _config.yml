@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Site Title"
+title                    : "데이터 분석 Blog"
 title_separator          : "&#124;"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "윤기오"
-description              : "데이터 마이닝을 공부하는 블로그"
+description              : "데이터 분석을 공부하는 블로그"
 url                      : "https://yunkio.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "yunkio/ykio.github.io"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
