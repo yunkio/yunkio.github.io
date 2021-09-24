@@ -109,10 +109,10 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "yko22222@gmail.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: mailto:yko22222@gmail.com
+    - label: "GitHub"
+      icon: "fas fa-fw fa-github"
+      url: "https://github.com/yunkio"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
