@@ -16,9 +16,9 @@
 main:
   #- title: "Home"
   #  url: "/"
-  - title: "Introduce"
-    url: /about/
+  - title: "Year"
+    url: /year-archive/
   - title: "Category"
-    url: "/categories/"
+    url: /categories/
   - title: "Tags"
     url: /tags/
