@@ -23,10 +23,10 @@ name                     : "윤기오"
 description              : "데이터 분석을 공부하는 블로그"
 url                      : "https://yunkio.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "yunkio/yunkio.github.io" #GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "https://github.com/yunkio/yunkio.github.io" #GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "데이터 분석 Blog"# overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "데이터 분석 Blog" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -215,7 +215,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 15 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -287,3 +287,12 @@ defaults:
       comments: # true
       share: true
       related: true
+
+
+  # _pages
+  - scope:
+      path: "pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
