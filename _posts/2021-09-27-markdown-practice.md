@@ -166,3 +166,13 @@ C --> D
   <figcaption>중앙정렬 </figcaption>
 </figure>
 어케되냐구~~
+
+<figure class="half">
+  <a href="/assets/images/ml/Figure1.1.png">
+  <img src="/assets/images/ml/Figure1.1.png"></a>
+
+  <a href="/assets/images/ml/Figure1.2.png">
+  <img src="/assets/images/ml/Figure1.2.png"></a>
+
+  <figcaption>두개두 된다~.</figcaption>
+</figure>
