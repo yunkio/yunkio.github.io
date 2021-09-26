@@ -152,20 +152,11 @@ C --> D
 ```
 
 # image
-![image](/assets/images/ml/Figure1.1.png){: width="400"}{: .align-center} 이렇게 글을 쓰면 어떻게 나오는지
-나는 아직도 시험중이다
+![image](/assets/images/ml/Figure1.1.png){: width="400"}{: .align-center} 
+이렇게 글을 쓰면 어떻게 나오는지 나는 시험중이다
 {: style="text-align: center; font-size:0.7em;"}
-<figure style="width: 300px" class="align-left">
-  <img src="/assets/images/ml/Figure1.1.png" alt="">
-  <figcaption>크기는 아까와 같이 300으로 주었다. </figcaption>
-</figure>
-이럴때 글을 입력하면 어떻게 되는지 나는 모른다. 그래서 해보고 있다. 과연 어떻게 될까. 너무너무 궁금해~
 
-<figure style="width: 500px" class="align-center">
-  <img src="/assets/images/ml/Figure1.1.png" alt="">
-  <figcaption>중앙정렬 </figcaption>
-</figure>
-어케되냐구~~
+이렇게 본문이 나온다.
 
 <figure class="half">
   <a href="/assets/images/ml/Figure1.1.png">
