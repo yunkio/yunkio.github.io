@@ -152,8 +152,8 @@ C --> D
 ```
 
 # image
-![image](/assets/images/ml/Figure1.1.png){: width="400" height="200"}{: .align-center}
-
+![image](/assets/images/ml/Figure1.1.png){: width="400"}{: .align-center} 이렇게 글을 쓰면 어떻게 나오는지
+나는 아직도 시험중이다
 <figure style="width: 300px" class="align-left">
   <img src="/assets/images/ml/Figure1.1.png" alt="">
   <figcaption>크기는 아까와 같이 300으로 주었다. </figcaption>
