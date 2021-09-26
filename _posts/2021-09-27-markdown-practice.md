@@ -141,3 +141,7 @@ $$
 
   <figcaption>두개두 된다~.</figcaption>
 </figure>
+
+문자 박스는 이렇게 쓸 수 있다. 
+{: .notice}
+
