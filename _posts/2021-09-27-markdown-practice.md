@@ -154,7 +154,14 @@ C --> D
 # image
 ![image](/assets/images/ml/Figure1.1.png){: width="400" height="200"}{: .align-center}
 
-<figure style="width: 300px" class="align-center">
+<figure style="width: 300px" class="align-left">
   <img src="/assets/images/ml/Figure1.1.png" alt="">
   <figcaption>크기는 아까와 같이 300으로 주었다. </figcaption>
 </figure>
+이럴때 글을 입력하면 어떻게 되는지 나는 모른다. 그래서 해보고 있다. 과연 어떻게 될까. 너무너무 궁금해~
+
+<figure style="width: 500px" class="align-center">
+  <img src="/assets/images/ml/Figure1.1.png" alt="">
+  <figcaption>중앙정렬 </figcaption>
+</figure>
+어케되냐구~~
