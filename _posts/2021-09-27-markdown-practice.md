@@ -152,4 +152,9 @@ C --> D
 ```
 
 # image
-![image](/assets/images/ml/Figure1.1.png)
+![image](/assets/images/ml/Figure1.1.png){: width="400" height="200"}{: .align-center}
+
+<figure style="width: 300px" class="align-left">
+  <img src="/assets/images/ml/Figure1.1.png" alt="">
+  <figcaption>크기는 아까와 같이 300으로 주었다. </figcaption>
+</figure>
