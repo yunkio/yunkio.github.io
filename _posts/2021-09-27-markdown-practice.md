@@ -150,3 +150,6 @@ A --> C(Round Rect)
 B --> D{Rhombus}
 C --> D
 ```
+
+# image
+![image](/assets/images/ml/Figure1.1.png)
