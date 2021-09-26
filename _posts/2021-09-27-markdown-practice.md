@@ -2,7 +2,10 @@
 date: 2021-09-27
 title: "Markdown 연습"
 categories: blog
-tags: markdown
+tags: 
+	- markdown
+	- LaTeX
+use_math: true
 toc: true  
 toc_sticky: true 
 ---
