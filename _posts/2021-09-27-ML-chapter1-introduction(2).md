@@ -142,9 +142,11 @@ $$\begin{aligned}p_y(y) &= p_x(x)\left|\frac{dx}{dy}\right|\\&=p_x(g(y))|g'(y)|\
 $x$가 $(-\infty, z)$ 범위에 속할 확률은 **누적 분포 함수**로 표현됩니다. 
 
 $$P(z) = \int^z_{-\infty}p(x)dx$$
+
 Figure 1.12에서 보여진 것처럼 $P'(x) = p(x)$ 입니다. 만약 여러 개의 연속적인 변수 $x_1, ..., x_D$가 주어지고 이 변수들이 벡터 $\mathbf{x}$로 표현될 경우에 결합 확률 밀도 $p(\mathbf{x}) = p(x_1, ..., x_D)$로 정의할 수 있습니다. 이 확률밀도에서 $\mathbf{x}$가 포인트 $\mathbf{x}$를 포함한 극솟값 $\delta\mathbf{x}$에 포함될 확률은 $p(\mathbf{x})\delta\mathbf{x}$로 주어집니다. 이 다변량 확률 밀도는 다음의 조건을 만족해야 합니다.
 
 $$\begin{aligned}p(\mathbf{x})\end{aligned} \geqq 0 \\ \int p(\mathbf{x})dx = 1$$
+
 위의 식에서 적분은 전체 $x$ 공간에 대해 시행했습니다. 이때 $x$가 이산 변수인 경우 $p(x)$를 **확률 질량 함수** 라고 부릅니다. 확률 밀도 함수의 경우에도 합의 법칙, 곱의 법칙, 베이지안 정리가 적용됩니다. 
 
 ## 기댓값과 공분산
@@ -153,6 +155,7 @@ $$\begin{aligned}p(\mathbf{x})\end{aligned} \geqq 0 \\ \int p(\mathbf{x})dx = 1$
 확률 밀도 $p(x)$ 하에서 어떤 함수 $f(x)$의 평균값은 $f(x)$의 **기댓값**이라고 하며, $\mathbb{E}[f]$로 표현합니다. 각각 이산 분포와 연속 분포인 경우의 기댓값은 다음과 같습니다.
 
 $$\begin{aligned}\mathbb{E}[f] = \sum_xp(x)f(x)\\\mathbb{E}[f]=\int p(x)f(x)dx\end{aligned}$$ 
+
 이렇게 각 $x$값에 대해 해당 확률을 가중치로 가중 평균을 구합니다. 만약 유한한 $N$개의 포인트를 확률 분포 또는 확률 밀도에서 추출했다면, 각 포인트들의 유한한 합산으로 기댓값을 근사할 수 있습니다.
 
 $$\mathbb{E}[f] \simeq \frac1N\sum^N_{n=1}f(x_n)$$
@@ -160,6 +163,7 @@ $$\mathbb{E}[f] \simeq \frac1N\sum^N_{n=1}f(x_n)$$
 이때 $\lim N\rightarrow\infty$을 취했을 경우 정확한 값이 됩니다.
 
 $$\mathbb{E}_x[f(x,y)]$$
+
 어떤 변수에 대해 평균을 내는지 지정하여 계산할 수도 있습니다. 가령 위의 식의 경우 함수 $f(x,y)$의 평균값을 $x$의 분포에 대해 구하는 식입니다. 위 식은 $y$에 대한 함수가 됩니다.
 
 또한 조건부 분포에 해당하는 **조건부 기댓값**을 구하는 식도 만들 수 있습니다.
@@ -170,6 +174,7 @@ $$\mathbb{E}[f|y] = \sum_xp(x|y)f(x)$$
 $f(x)$의 **분산**은 다음과 같이 정의됩니다.
 
 $$\text{var}[f]=\mathbb{E}[(f(x)-\mathbb{E}[f(x)])^2$$
+
 분산은 $f(x)$가 평균값 $\mathbb{E}[f(x)]$로 부터 얼마나 멀리 분포되어 있는지를 나타냅니다. 위 식은 다음과 같이 $f(x)$와 $f(x)^2$의 기댓값으로 표현 가능합니다.
 
 $$\text{var}[f] = \mathbb{E}[f(x)^2] - \mathbb{E}[f(x)]^2$$
@@ -178,6 +183,7 @@ $$\text{var}[f] = \mathbb{E}[f(x)^2] - \mathbb{E}[f(x)]^2$$
 두 개의 확률 변수 $x$와 $y$에 대해서 **공분산** *covariance*은 다음과 같이 정의됩니다.
 
 $$\begin{aligned}\text{cov}[x,y] &= \mathbb{E}_{x,y}[\{x-\mathbb{E}[x]\}\{y-\mathbb{E}[y]\}]\\&=\mathbb{E}_{x,y}[xy]-\mathbb{E}[x]\mathbb{E}[y]\end{aligned}$$
+
 공분산은 $x$값과 $y$값이 얼마나 함께 같이 변동하는가에 대한 지표입니다. 만약 $x$와 $y$가 독립일 경우 공분산값은 0으로 향합니다. 벡터 $\mathbf{x}$의 구성 원소들 서로 간의 공분산을 고려할 경우에는 $\text{cov}[\mathbf{x}]\equiv\text{cov}[\mathbf{x},\mathbf{x}]$와 같이 좀 더 간단하게 표현합니다.
 
 ## 베이지안 확률
