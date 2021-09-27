@@ -1,9 +1,10 @@
 ---
 date: 2021-09-27
-title: "Markdown 연습"
+title: "Chapter 1. Introduction"
 categories: 머신러닝과 패턴인식
 tags: 
   - 머신러닝
+  - 패턴인식
 toc: true  
 toc_sticky: true 
 ---
