@@ -66,3 +66,22 @@ Figure 1.3 오차 함수
 {: style="text-align: center; font-size:0.7em;"}
 
 $E(\mathbf{w})$를 최소화하는 $\mathbf{w}$를 선택함으로써 이 문제를 해결 가능합니다. 오차 함수가 이차 다항식의 형태를 지니고 있기 때문에 계수에 대해 미분하면 $\mathbf{w}$에 대해 선형인 식을 구할 수 있고, 유일한 최적의 값인 $\mathbf{w}^\ast$를 찾아낼 수 있습니다. 따라서 결과에 해당하는 다항식은 $y(x,\mathbf{w}^\ast)$의 형태를 가집니다.
+
+## 모델 결정 *Model Selection*
+
+<figure class="half">
+  <a href="/assets/images/ml/Figure1.4a.png">
+  <img src="/assets/images/ml/Figure1.4a.png"></a>
+
+  <a href="/assets/images/ml/Figure1.4b.png">
+  <img src="/assets/images/ml/Figure1.4b.png"></a>
+</figure>
+<figure class="half">
+  <a href="/assets/images/ml/Figure1.4c.png">
+  <img src="/assets/images/ml/Figure1.4c.png"></a>
+
+  <a href="/assets/images/ml/Figure1.4d.png">
+  <img src="/assets/images/ml/Figure1.4d.png"></a>
+</figure>
+Figure 1.4 다양한 차수 M에 따른 주어지는 곡선 피팅
+{: style="text-align: center; font-size:0.7em;"}
