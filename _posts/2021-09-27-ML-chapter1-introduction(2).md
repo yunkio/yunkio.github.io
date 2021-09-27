@@ -1,5 +1,5 @@
 ---
-date: 2021-09-27
+date: 2021-09-26
 title: "Chapter 1. Introduction (2) - 확률론, 모델 선택"
 categories: 
   - 머신러닝과 패턴인식

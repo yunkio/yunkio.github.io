@@ -1,5 +1,5 @@
 ---
-date: 2021-09-27
+date: 2021-09-25
 title: "Chapter 1. Introduction (1)"
 categories: 
   - 머신러닝과 패턴인식
