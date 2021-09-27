@@ -28,7 +28,7 @@ Figure 1.20 입력 공간을 단순히 나눠서 예측한 접근법
 
 위 그림과 같이 단순한 접근법을 사용할 수 있습니다. 공간을 나눈 뒤 각 영역에서 가장 많이 차지하고 있는 label로 분류하는 것입니다. 이 접근법은 여러가지 문제가 있을 수 있습니다. 가장 큰 문제는 입력 변수가 더 많은 경우에 발생합니다. 
 
-![image](/assets/images/ml/Figure1.21.png){: width="400"}{: .align-center} 
+![image](/assets/images/ml/Figure1.21c.png){: width="400"}{: .align-center} 
 Figure 1.21 차원의 저주
 {: style="text-align: center; font-size:0.7em;"}
 
@@ -48,7 +48,7 @@ $$ V_D(r) = K_DrD$$
 
 $$ \frac{V_D(1)-V_D(1-\epsilon)}{V_D(1)} = 1 - (1 - \epsilon)^D$$
 
-![image](/assets/images/ml/Figure1.21.png){: width="400"}{: .align-center} 
+![image](/assets/images/ml/Figure1.22.png){: width="400"}{: .align-center} 
 Figure 1.22 차원값 $D$에 대해 $r = 1 - \epsilon$에서 $r=1$사이에 존재하는 부피의 비율 
 {: style="text-align: center; font-size:0.7em;"}
 
