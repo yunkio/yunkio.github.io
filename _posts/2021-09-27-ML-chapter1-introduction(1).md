@@ -212,7 +212,7 @@ $$p(Y=y_j|X=x_i) = \frac{n_{ij}}{c_i}$$
 
 위와 같이 $i$ 행에 있는 전체 포인트의 수와 $i, j$칸에 있는 포인트 수의 비율을 통해 계산할 수 있으며, 이로부터  **곱의 법칙**을 도출해 낼 수 있습니다.
 
-$$\begin{align} p(X=x_i,Y=y_i) &= \frac{n_{ij}}N = \frac{n_{ij}}{c_i} \cdot \frac{c_i}{N} \\ &= p(Y = y_j|X=x_i)p(X=x_i)\end{align} $$
+$$\begin{aligned} p(X=x_i,Y=y_i) &= \frac{n_{ij}}N = \frac{n_{ij}}{c_i} \cdot \frac{c_i}{N} \\ &= p(Y = y_j|X=x_i)p(X=x_i)\end{aligned}$$
 
 위의 합의 법칙과 곱의 법칙을 더 간단한 표현법을 사용해서 표현할 수 있습니다.
 
@@ -221,9 +221,53 @@ $$p(X) = \sum_Yp(X, Y) \\ p(X, Y) = p(Y|X)p(X)$$
 
 ## 베이즈 정리
 
-위에서 구해낸 곱의 법칙을 활용하여 조건부 확률 간의 관계인 다음 식을 도출해낼 수 있다.
+위에서 구해낸 곱의 법칙을 활용하여 조건부 확률 간의 관계인 다음 식을 도출해낼 수 있습니다.
 
 $$p(Y|X) = \frac{p(X|Y)p(Y)}{p(X)}$$
 
-이 식이 머신 러닝과 패턴 인식 전반에 걸쳐 아주 중요한 역할을 차지하는 **베이즈 정리**이다.
+이 식이 머신 러닝과 패턴 인식 전반에 걸쳐 아주 중요한 역할을 차지하는 **베이즈 정리**입니다. 합의 법칙을 사용해서 베이지안 정리의 분모를 분자에 있는 항들로 표현할 수 있습니다.
+
+$$p(X) = \sum_Yp(X|Y)p(Y)$$
+
+베이지안 정리의 분모는 정규화 상수로 볼 수 있습니다. 왼쪽 항을 모든 $Y$값에 대하여 합했을 때 1이 되도록 하는 역할입니다.
+
+<figure class="half">
+  <a href="/assets/images/ml/Figure1.11a.png">
+  <img src="/assets/images/ml/Figure1.11a.png"></a>
+
+  <a href="/assets/images/ml/Figure1.11b.png">
+  <img src="/assets/images/ml/Figure1.11b.png"></a>
+</figure>
+<figure class="half">
+  <a href="/assets/images/ml/Figure1.11c.png">
+  <img src="/assets/images/ml/Figure1.11c.png"></a>
+
+  <a href="/assets/images/ml/Figure1.11d.png">
+  <img src="/assets/images/ml/Figure1.11d.png"></a>
+</figure>
+Figure 1.11 두 변수의 결합 분포
+{: style="text-align: center; font-size:0.7em;"}
+
+이를 직관적으로 도식화한 그림이며, 두 변수의 결합 분포를 예로 들었습니다. 표본의 수는 $N=60$이며 표본들은 결합 분포에서 랜덤으로 추출했습니다. 분포에서 제한된 수의 데이터만 추출했을 때는 오른쪽 위의 그림과 같이 확률을 모델할 수 있습니다. 데이터로부터 원 분포를 모델링하는 것은 통계적 패턴 인식의 핵심 중 하나입니다.
+
+### 예시
+
+어떤 한 상자를 선택했는데 그것이 파란색 상자였다고 가정해보겠습니다. 그러면 그 상황에서 초록색 공을 고를 확률은 3/4이고 따라서 $p(F=a|B=b) = 3/4$ 입니다. 이와 같은 방법으로 경우의 수를 정리할 수 있습니다.
+
+$$p(F=g|B=r) = 1/4 \\ p(F=o|B=r) = 3/4 \\ p(F=g|B=b) = 3/4 \\ p(F=o|B=b) = 1/4$$
+
+이제 위의 식에서 확률의 합의 법칙과 곱의 법칙을 적용하여 초록색 공을 고를 전체 확률을 계산할 수 있습니다.
+
+$$\begin{aligned} p(F=g) &= p(F=g|B=r)p(B=r) + p(F=g|B=b)p(B=b) \\ &= \frac14 \times \frac4{10} +  \frac34 \times \frac6{10} = \frac{11}{20} \end{aligned} $$
+
+여기에 다시 합의 법칙을 적용하면 $p(F=o) = 1 - \frac{11}{20} = \frac{9}{20}$ 입니다.
+
+이제 다른 예시를 들어보겠습니다. 어떤 공을 선택했는데 그 공이 오렌지색이고 이 오렌지색이 어떤 상자에서 나왔는지를 알고 싶다고 가정해 보겠습니다. 
+이를 위해서는 공이 주어졌을 때 고른 상자가 어떤 것이었는지에 대한 조건부 확률을 계산해야 합니다. 베이지안 정리를 적용하여 조건부 확률을 뒤집으면 이 문제를 해결할 수 있습니다.
+
+$$p(B=r|F=o) = \frac{p(F=o|B=r)p(B=r)}{p(F=o)} = \frac34\times\frac4{10}\times\frac{20}9 = \frac23$$
+
+합의 법칙에 따라 $P(B=b|F=o) = 1 - \frac23 = \frac13$ 이 됩니다.
+
+### 해석
 
