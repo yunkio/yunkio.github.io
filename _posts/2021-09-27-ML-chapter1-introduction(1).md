@@ -1,6 +1,6 @@
 ---
 date: 2021-09-27
-title: "Chapter 1. Introduction"
+title: "Chapter 1. Introduction (1)"
 categories: 
   - 머신러닝과 패턴인식
 tags: 
@@ -83,5 +83,22 @@ $E(\mathbf{w})$를 최소화하는 $\mathbf{w}$를 선택함으로써 이 문제
   <a href="/assets/images/ml/Figure1.4d.png">
   <img src="/assets/images/ml/Figure1.4d.png"></a>
 </figure>
-Figure 1.4 다양한 차수 M에 따른 주어지는 곡선 피팅
+Figure 1.4 다양한 차수 $M$에 따른 주어지는 곡선 피팅
 {: style="text-align: center; font-size:0.7em;"}
+
+다항식의 차수 $M$을 결정하는 문제가 여전히 남아 있습니다. 이 문제가 **모델 결정**이라 불리는 콘셉트의 예시입니다. 위 그림은 $M = 0, 1, 3, 9$인 네 가지 경우에 대해 다항식을 피팅하는 예시입니다. 네 가지 예시 중에서는 삼차$(M = 3)$ 다항식의 경우가 $\sin(2\pi x)$를 가장 잘 표현하는 것으로 보입니다. 차수를 많이 높일 경우$(M=9)$에는 훈련 집합에 완벽한 피팅이 가능하여 $E(\mathbf{w}^\ast) = 0$이지만 피팅된 곡선이 심하게 진동하여 $\sin(2\pi x)$를 잘 표현하고 있지는 못 합니다. 이것을 **과적합**이라고 부릅니다.
+
+$M$에 따른 일반화의 성능이 어떻게 변화하는지 정량적으로 살펴보겠습니다. 이를 위해 앞과 같은 과정을 사용하되 랜덤한 노이즈값만 다르게 적용하여 100개의 새 데이터 포인트로 이루어진 시험 집합을 만들어 훈련 집합과 시험 집합 각각에 대해서 $E(\mathbf{w}^\ast)$를 계산할 것입니다. 이를 통해 각각의 차수 $M$에 대해서 잔차가 어떻게 변화하는지 확인할 수 있습니다. 이를 위해 **평균 제곱근 오차** *root mean square error, RMS error*를 사용하겠습니다. 평균 제곱근 오차의 식은 다음과 같습니다.
+
+$$E_\text{RMS} = \sqrt{2E(\mathbf{w}^\ast)/N}$$
+
+N으로 나눔으로써 데이터 사이즈가 다른 경우에도 비교할 수 있으며, 제곱근을 취해 E_\text{RMS}가 표적값 $t$와 같은 크기를 가지도록 했습니다.
+
+![image](/assets/images/ml/Figure1.5.png){: width="400"}{: .align-center} 
+Figure 1.5 RMS 그래프
+{: style="text-align: center; font-size:0.7em;"}
+
+$M$ 값이 작은 경우에는 시험 집합의 오차가 상대적으로 큽니다. 낮은 차수의 다항식은 융통성이 없어 피팅된 다항식이 함수 $\sin(2\pi x)$의 진동을 잘 반영하지 못 합니다. 반면 $3 \leqq M \leqq 8$ 인 경우 시험 집합의 오차가 작고 피팅된 다항식이 $\sin(2\pi x)$를 잘 표현합니다.
+
+$M = 9$인 경우는 앞서 살펴본 것과 같이 과적합되고 있습니다. 함수 $y(x,\mathbf{w}^\ast)$가 심하게 진동하고 있으므로 시험 집합의 오차가 굉장히 큽니다.
+
