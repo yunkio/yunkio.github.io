@@ -173,7 +173,7 @@ $$\mathbb{E}[f|y] = \sum_xp(x|y)f(x)$$
 ### 분산
 $f(x)$의 **분산**은 다음과 같이 정의됩니다.
 
-$$\text{var}[f]=\mathbb{E}[(f(x)-\mathbb{E}[f(x)])^2$$
+$$\text{var}[f]=\mathbb{E}[(f(x)-\mathbb{E}[f(x)])^2]$$
 
 분산은 $f(x)$가 평균값 $\mathbb{E}[f(x)]$로 부터 얼마나 멀리 분포되어 있는지를 나타냅니다. 위 식은 다음과 같이 $f(x)$와 $f(x)^2$의 기댓값으로 표현 가능합니다.
 
