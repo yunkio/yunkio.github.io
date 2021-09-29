@@ -24,9 +24,11 @@ toc_sticky: true
 
 <script src="https://gist.github.com/yunkio/ae826edab0c3f46c438988181b052cf1.js"></script>
 
-tf.Tensor([0.6355989], shape=(1,), dtype=float32) {: .notice}
+tf.Tensor([0.6355989], shape=(1,), dtype=float32) 
+{: .notice}
 
-난수를 생성하는 코드 {: style="text-align: center; font-size:0.7em;"}
+난수를 생성하는 코드 
+{: style="text-align: center; font-size:0.7em;"}
 
 난수를 생성하는 방법은 위와 같습니다. *tf.random.uniform* 에서는 균일 분포로 난수을 얻습니다.  
 
