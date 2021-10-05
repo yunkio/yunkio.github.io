@@ -10,10 +10,6 @@ tags:
 toc: true  
 toc_sticky: true 
 ---
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 *본 글은 책 '패턴 인식과 머신 러닝'의 국내 출판본을 바탕으로 작성되었습니다.*
 
 # 2.3 가우시안 분포
@@ -209,11 +205,7 @@ $$\boldsymbol\Sigma_{a\vert b}=\boldsymbol\Lambda_{aa}^{-1}$$
 
 $$\mathbf{x}_a^\text{T}\{\boldsymbol\Lambda_{aa}\boldsymbol\mu_a-\boldsymbol\Lambda_{ab}(\mathbf{x}_b-\boldsymbol\mu_b)\}$$
 
-<<<<<<< HEAD
-위 식에서 $\mathbf{x}_{a}$의 계수와 $\boldsymbol\Sigma^{-1}_{a|b}\boldsymbol\mu_{a|b}$ 는 동일해야 합니다. 따라서 다음을 구할 수 있습니다.
-=======
-위 식에서 $\boldsymbol\Sigma^{-1}_{a\vert b}\boldsymbol\mu_{a\vert b}$ 의 계수는 동일해야 합니다. 따라서 다음을 구할 수 있습니다.
->>>>>>> master
+여기서 다음을 구할 수 있습니다.
 
 $$\boldsymbol\mu_{a\vert b} = \boldsymbol\mu_a - \boldsymbol\Lambda_{aa}^{-1}\boldsymbol\Lambda_{ab}(\mathbf{x}_b-\boldsymbol\mu_b)$$
 
