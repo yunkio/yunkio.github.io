@@ -1,5 +1,5 @@
 ---
-date: 2021-10-04
+date: 2021-10-03
 title: "Chapter 2. Probability Distribution (2) - 다항 변수"
 categories: 
   - 머신러닝과 패턴인식
