@@ -289,3 +289,6 @@ $$\begin{aligned}
 $$\ln p(\mathbf{X}\vert\boldsymbol\pi, \boldsymbol\mu, \boldsymbol\Sigma)=\sum^N_{n=1}\ln\left\{\sum^K_{k=1}\pi_k\mathcal{N}(\mathbf{x}_n\vert\boldsymbol\mu_k,\boldsymbol\Sigma_k)\right\}$$
 
 여기서 $\mathbf{X} = \{\mathbf{x}_1, ..., \mathbf{x}_N\}$ 입니다. 로그 안에 $k$에 대한 합산이 포함되어 있어 단일 가우시안 분포에 비해 더 복잡합니다. 이 함수의 최댓값을 구하기 위해서는 반복적인 수치적 최적화 테크닉이나 **기댓값 최대화** *expectation maximization* 등의 방법을 사용할 수 있습니다. 이 방법에 대해서는 나중에 다루겠습니다.
+
+
+working in progress..
