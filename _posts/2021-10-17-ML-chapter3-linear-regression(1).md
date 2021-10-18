@@ -1,6 +1,6 @@
 ---
 date: 2021-10-17
-title: "Chapter 3. Linear Regression (1) - "
+title: "Chapter 3. Linear Regression (1) - 선형 기저 함수 모델"
 categories: 
   - 머신러닝과 패턴인식
 tags: 
@@ -184,7 +184,7 @@ $$\frac12\sum^N_{n=1}\{t_n-\mathbf{w}^\text{T}\boldsymbol\phi(\mathbf{x}_n)\}^2+
 
 $q=2$인 경우 이는 앞서 보았던 이차 정규화항에 해당합니다.
 
-![image](/assets/images/ml/Figure3.2.png){: width="600"}{: .align-center} 
+![image](/assets/images/ml/Figure3.3.png){: width="600"}{: .align-center} 
 Figure 3.3 다양한 매개변수 $q$값에 따른 정규화항의 윤곽선
 {: style="text-align: center; font-size:0.7em;"}
 
@@ -213,6 +213,9 @@ $$\begin{aligned}
 
 $$\mathbf{W}_\text{ML}=(\boldsymbol\Phi^\text{T}\boldsymbol\Phi)^{-1}$$
 
-# 3.2 편향 분산 분해
+위 식을 각각의 타깃 변수 $t_k$에 대해 살펴보면 다음과 같습니다.
 
-# 3.3 베이지안 선형 회귀
+$$\mathbf{w}_k = (\boldsymbol\Phi^\text{T}\boldsymbol\Phi)^{-1}\boldsymbol\Phi^\text{T}\mathbf{t}_k=\boldsymbol\Phi^\dagger\mathbf{t}_k$$
+
+각각의 타깃 변수들에 대한 회귀 문제들의 해는 서로 분리되어 있으며, 모든 벡터 $\mathbf{w}_k$들에 대해 공유되는 유사 역행렬 $\boldsymbol\Phi^\dagger$만 계산해 내면 됩니다.
+
