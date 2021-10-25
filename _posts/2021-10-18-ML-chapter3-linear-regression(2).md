@@ -142,6 +142,98 @@ $$\ln p(\mathbf{w}\vert\mathbf{t})=-\frac\beta2\sum^N_{n=1}\{t_n-\mathbf{w}^\tex
 Figure 3.7 $y(x,\mathbf{w}) = w_0 + w_1x$ 형태의 선형 모델에 대한 순차적 베이지안 학습 과정
 {: style="text-align: center; font-size:0.7em;"}
 
+위 그림은 선형 기저 함수 모델의 베이지안 학습과 사후 분포의 순차적 업데이트 방식을 시각화 한 그림입니다. 매개변수 $\alpha$와 정밀도 매개변수 $\beta$가 주어진 상황에서 데이터 집합 크기가 커짐에 따라 베이지안 학습이 어떻게 되는지를 확인할 수 있습니다. 또, 현재의 사후 분포가 새로운 데이터가 관측된 후에 새로운 사전 분포가 됨을 알 수 있습니다. 분포의 흰색 십자가가 데이터를 만들 때 사용한 매개변수를 의미하며, 오른쪽 열의 파란색 동그라미는 관측된 데이터를 의미합니다. 이렇게 만들어진 샘플 회귀 함수는 오른쪽에 빨간색 직선으로 나타납니다.
+
 ## 예측 분포
 
+실제 응용 사례에서는 $\mathbf{w}$값을 알아내는 것보다 새로운 $\mathbf{x}$에 대한 $t$값을 예측하는 것이 더 중요할 수 있습니다. 이를 위해 **예측 분포** *predictive distribution*을 고려할 필요가 있습니다.
+
+$$p(t\vert\mathbf{t},\alpha,\beta) = \int p(t\vert\mathbf{w},\beta)p(\mathbf{w}\vert\mathbf{t},\alpha,\beta)d\mathbf{w}$$
+
+여기서 $\mathbf{t}$는 표적값들의 벡터입니다. 위 식은 두 가우시안 분포의 콘볼루션을 포함하고 있으므로 예측 분포는 다음과 같은 형태를 지닙니다.
+
+$$p(t\vert\mathbf{x},\mathbf{t},\alpha,\beta) = \mathcal{N}(t\vert\mathbf{m}^\text{T}_N\boldsymbol{\phi}(\mathbf{x}),\sigma^2_N(\mathbf{x}))$$
+
+여기서 분산 $\sigma^2_N(\mathbf{x})$는 다음과 같습니다.
+
+$$\sigma^2_N(\mathbf{x}) = \frac1\beta+\boldsymbol{\phi}(\mathbf{x})^\text{T}\mathbf{S}_N\boldsymbol{\phi}(\mathbf{x})$$
+
+위 식의 첫 번째 항은 데이터의 노이즈를 표현하며, 두 번째 항은 매개변수 $\mathbf{w}$에 대한 불확실성을 표현합니다. 노이즈와 $\mathbf{w}$에 대한 분포를 처리하는 것은 독립적인 가우시안 분포이기 때문에 분산들을 합산할 수 있습니다. 추가적인 데이터가 관측된다면 사후 분포는 더 좁아지며 $\lim N \rightarrow \infty$일 경우 두 번째 항이 0이 되어 예측 분포의 분산은 데이터의 노이즈만을 포함하게 됩니다.
+
+<figure class="half">
+  <a href="/assets/images/ml/Figure3.8a.png">
+  <img src="/assets/images/ml/Figure3.8a.png" width="200"></a>
+
+  <a href="/assets/images/ml/Figure3.8b.png">
+  <img src="/assets/images/ml/Figure3.8b.png" width="200"></a>
+</figure>
+<figure class="half">
+  <a href="/assets/images/ml/Figure3.8c.png">
+  <img src="/assets/images/ml/Figure3.8c.png" width="200"></a>
+
+  <a href="/assets/images/ml/Figure3.8d.png">
+  <img src="/assets/images/ml/Figure3.8d.png" width="200"></a>
+</figure>
+
+Figure 3.8 예측 분포의 예시
+{: style="text-align: center; font-size:0.7em;"}
+
+위 그림에서 녹색 곡선은 노이즈가 추가된 데이터가 만들어진 원본 함수이며, 데이터 집합의 크기가 각각 $N=1, 2, 4, 25$인 경우에 대한 함수 도식이 그려져 있습니다. 빨간색 곡선은 예측 분포들의 평균이며 빨간색 구간은 1 표준 편차만큼 표현한 것입니다. 예측값의 불확실성은 $x$에 종속적이며 데이터 포인트들의 주변에서 불확실성이 가장 작습니다. 
+
+위 그림은 점에 대한 에측 분산만을 $x$에 대한 함수로 보여 주고 있으므로 서로 다른 $x$의 예측값들에 대한 공분산을 살펴보기 위해 $\mathbf{w}$에 대한 사전 분포로부터 샘플들을 추출한 후 그에 대한 함수 $y(x, \mathbf{w})$를 그려보겠습니다.
+
+<figure class="half">
+  <a href="/assets/images/ml/Figure3.9a.png">
+  <img src="/assets/images/ml/Figure3.9a.png" width="200"></a>
+
+  <a href="/assets/images/ml/Figure3.9b.png">
+  <img src="/assets/images/ml/Figure3.9b.png" width="200"></a>
+</figure>
+<figure class="half">
+  <a href="/assets/images/ml/Figure3.9c.png">
+  <img src="/assets/images/ml/Figure3.9c.png" width="200"></a>
+
+  <a href="/assets/images/ml/Figure3.9d.png">
+  <img src="/assets/images/ml/Figure3.9d.png" width="200"></a>
+</figure>
+
+Figure 3.9 $\mathbf{w}$의 사후 분포들에서 추출한 샘플들을 사용한 $y(w,\mathbf{w})$의 도식
+{: style="text-align: center; font-size:0.7em;"}
+
+가우시안 같은 지역적인 기저 함수를 사용한다면 기저 함수의 중심으로부터 떨어진 구간에서는 위 식의 두 번째 항의 기여도가 0이 됩니다. 즉 기저 함수에 의해 포함되는 지역의 바깥에 대해서 예측할 경우 모델의 신뢰도가 높아진다는 겨로가가 나오게 됩니다. 이는 옳지 않은 결과입니다. **가우시안 과정** *Gaussian process* 라고 알려져 있는 기법을 활용하여 이 문제를 피할 수 있습니다.
+
 ## 등가 커널
+
+선형 기저 함수 모델에서의 사후 해를 다른 방식으로 해석할 수 있습니다. 가우시안 과정을 포함한 커널 방법론에 대해 살펴보는 첫 단계입니다. 예측 평균을 다음과 같이 적을 수 있습니다.
+
+$$y(\mathbf{x}, \mathbf{m}_N) = \mathbf{m}^\text{T}_N\boldsymbol\phi(\mathbf{x}) = \beta\boldsymbol\phi(\mathbf{x})^\text{T}\mathbf{S}_N\boldsymbol\Phi^\text{T}\mathbf{t} = \sum^N_{n=1}\beta\boldsymbol\phi(\mathbf{x})^\text{T}\mathbf{S}_N\boldsymbol\phi(\mathbf{x}_n)t_n$$
+
+이 식은 다음과 같습니다.
+
+$$\begin{aligned}
+y(\mathbf{x},\mathbf{m}_N)&=\sum^N_{n=1}k(\mathbf{x},\mathbf{x}_n)t_n \\
+k(\mathbf{x},\mathbf{x}') &= \beta\boldsymbol\phi(\mathbf{x})^\text{T}\mathbf{S}_N\boldsymbol\phi(\mathbf{x}')
+\end{aligned}$$
+
+위 식 $k(\mathbf{x},\mathbf{x}')$는 **평활 행렬** *smoother matrix*, **등가 커널** *equivalent kernel* 이라고 알려져 있습니다. 훈련 집합 표적값들의 선형 결합을 입력받아서 예측을 내는 이러한 회귀 함수는 **선형 평활기** *linear smoother* 라고 부릅니다. $\mathbf{S}_N$의 정의에 $\mathbf{x}_n$이 포함되어 있기 때문에 등가 커널은 입력값 $\mathbf{x}_n$에 종속적입니다. 
+
+![image](/assets/images/ml/Figure3.10.png){: width="500"}{: .align-center}
+
+Figure 3.10 가우시안 기저 함수에 대한 등가커널 $k(x, x')$
+{: style="text-align: center; font-size:0.7em;"}
+
+위 그림은 기저 함수가 가우시안인 경우의 등가 커널에 대한 그림입니다. 커널 함수 $k(x, x')$를 세 개의 서로 다른 $x$값들에 대해서 $x'$의 함수로 그렸습니다. 각각은 $x$ 주변에서 지역화되어 있습니다. $y(x, \mathbf{m}_N)$으로 주어지는 $x$에서의 예측 분포는 표적값들의 가중 조합을 통해 구해지게 되는데 $x$값에 근접할수록 더 높은 가중치, $x$값으로부터 멀리 떨어질수록 낮은 가중치를 지니게 됩니다. 이러한 지역화 성질은 비지역적인 다항 기저 함수와 시그모이드 기저 함수의 경우에도 적용됩니다.
+
+$y(\mathbf{x})$와 $y(\mathbf{x'})$ 간의 공분산에 대해 고려해보면 등가 커널의 역할에 대한 더 깊은 의미를 생각해볼 수 있습니다.
+
+$$\text{cov}[y(\mathbf{x}),y(\mathbf{x}')] = \beta^{-1}k(\mathbf{x},\mathbf{x}')$$
+
+등가 커널의 형태로부터 서로 근처에 있는 포인트들의 예측 평균들은 상관성이 크며 서로 멀리 떨어져 있는 포인트들의 예측 평균은 상관성이 작다는 것을 알 수 있습니다. 
+
+선형 회귀를 커널 함수로 표현하는 것을 바탕으로 다음과 같은 대체적인 회귀 방법론을 생각해볼 수 있습니다. 기저 함수를 직접 도입하여 사용하는 대신 지역화된 커널을 직접 정의하고 이를 바탕으로 새 입력 벡터 $\mathbf{x}$에 대한 예측값을 주어진 관측된 훈련 집합으로부터 구할 수 있습니다. 이를 바탕으로 유도되는 방법론이 **가우시안 과정** *Gaussian process* 입니다. 이에 대해서는 나중에 더 자세히 살펴보겠습니다.
+
+등가 커널이 가중치들을 결정하며 이 가중치들을 바탕으로 훈련 집합의 타깃 변수들이 합쳐져서 새로운 $\mathbf{x}$에 대한 예측을 한다는 것을 살펴보았습니다. 이 가중치들을 모든 $\mathbf{x}$에 대해 합산하면 1이 됩니다.
+
+$$\sum^N_{n=1}k(\mathbf{x},\mathbf{x}_n) = 1$$
+
+커널 함수는 양의 값을 가질 수도, 음의 값을 가질 수도 있습니다. 
