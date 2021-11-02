@@ -1,6 +1,6 @@
 ---
 date: 2021-09-28
-title: "Chapter 3. 텐서플로 2.0 시작하기"
+title: "[Tensorflow] Chapter 3. 텐서플로 2.0 시작하기"
 categories: 
   - 시작하세요! 텐서플로 2.0 프로그래밍
 tags: 

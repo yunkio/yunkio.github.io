@@ -1,8 +1,8 @@
 ---
 date: 2021-10-25
-title: "Chapter 3. Linear Regression (3) - 베이지안 모델 비교, 증거 근사, 고정 기저 함수의 문제점"
+title: "[PRML] Chapter 3. Linear Regression (3) - 베이지안 모델 비교, 증거 근사, 고정 기저 함수의 문제점"
 categories: 
-  - 머신러닝과 패턴인식
+  - 패턴인식과 머신러닝
 tags: 
   - 머신러닝
   - 패턴인식

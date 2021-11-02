@@ -1,6 +1,6 @@
 ---
 date: 2021-10-20
-title: "Chapter 6. 컨볼루션 신경망"
+title: "[Tensorflow] Chapter 6. 컨볼루션 신경망"
 categories: 
   - 시작하세요! 텐서플로 2.0 프로그래밍
 tags: 

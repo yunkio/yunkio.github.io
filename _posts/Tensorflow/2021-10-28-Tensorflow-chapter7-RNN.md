@@ -1,6 +1,6 @@
 ---
 date: 2021-10-28
-title: "Chapter 7. 순환 신경망"
+title: "[Tensorflow] Chapter 7. 순환 신경망"
 categories: 
   - 시작하세요! 텐서플로 2.0 프로그래밍
 tags: 

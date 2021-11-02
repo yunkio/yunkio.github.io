@@ -1,8 +1,8 @@
 ---
 date: 2021-09-27
-title: "Chapter 1. Introduction (3) - 차원의 저주, 결정 이론"
+title: "[PRML] Chapter 1. Introduction (3) - 차원의 저주, 결정 이론"
 categories: 
-  - 머신러닝과 패턴인식
+  - 패턴인식과 머신러닝
 tags: 
   - 머신러닝
   - 패턴인식

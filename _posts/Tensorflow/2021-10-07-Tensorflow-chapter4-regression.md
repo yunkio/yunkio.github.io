@@ -1,6 +1,6 @@
 ---
 date: 2021-10-07
-title: "Chapter 4. 회귀"
+title: "[Tensorflow] Chapter 4. 회귀"
 categories: 
   - 시작하세요! 텐서플로 2.0 프로그래밍
 tags: 

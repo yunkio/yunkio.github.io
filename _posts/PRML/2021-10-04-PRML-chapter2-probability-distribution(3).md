@@ -1,8 +1,8 @@
 ---
 date: 2021-10-04
-title: "Chapter 2. Probability Distribution (3) - 가우시안 분포"
+title: "[PRML] Chapter 2. Probability Distribution (3) - 가우시안 분포"
 categories: 
-  - 머신러닝과 패턴인식
+  - 패턴인식과 머신러닝
 tags: 
   - 머신러닝
   - 패턴인식

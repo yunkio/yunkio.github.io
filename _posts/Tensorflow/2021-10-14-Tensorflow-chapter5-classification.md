@@ -1,6 +1,6 @@
 ---
 date: 2021-10-14
-title: "Chapter 5. 분류"
+title: "[Tensorflow] Chapter 5. 분류"
 categories: 
   - 시작하세요! 텐서플로 2.0 프로그래밍
 tags: 

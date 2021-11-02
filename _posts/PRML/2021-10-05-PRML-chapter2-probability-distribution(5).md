@@ -1,8 +1,8 @@
 ---
 date: 2021-10-05
-title: "Chapter 2. Probability Distribution (5) - 비매개변수적 방법"
+title: "[PRML] Chapter 2. Probability Distribution (5) - 비매개변수적 방법"
 categories: 
-  - 머신러닝과 패턴인식
+  - 패턴인식과 머신러닝
 tags: 
   - 머신러닝
   - 패턴인식

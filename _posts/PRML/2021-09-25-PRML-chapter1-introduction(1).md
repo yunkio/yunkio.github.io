@@ -1,8 +1,8 @@
 ---
 date: 2021-09-25
-title: "Chapter 1. Introduction (1) - 소개"
+title: "[PRML] Chapter 1. Introduction (1) - 소개"
 categories: 
-  - 머신러닝과 패턴인식
+  - 패턴인식과 머신러닝
 tags: 
   - 머신러닝
   - 패턴인식

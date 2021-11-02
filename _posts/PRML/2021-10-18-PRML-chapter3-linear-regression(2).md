@@ -1,8 +1,8 @@
 ---
 date: 2021-10-18
-title: "Chapter 3. Linear Regression (2) - 편향 분산 분해, 베이지안 선형 회귀"
+title: "[PRML] Chapter 3. Linear Regression (2) - 편향 분산 분해, 베이지안 선형 회귀"
 categories: 
-  - 머신러닝과 패턴인식
+  - 패턴인식과 머신러닝
 tags: 
   - 머신러닝
   - 패턴인식

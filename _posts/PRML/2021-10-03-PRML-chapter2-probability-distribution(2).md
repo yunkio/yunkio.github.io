@@ -1,8 +1,8 @@
 ---
 date: 2021-10-03
-title: "Chapter 2. Probability Distribution (2) - 다항 변수"
+title: "[PRML] Chapter 2. Probability Distribution (2) - 다항 변수"
 categories: 
-  - 머신러닝과 패턴인식
+  - 패턴인식과 머신러닝
 tags: 
   - 머신러닝
   - 패턴인식

@@ -1,8 +1,8 @@
 ---
 date: 2021-10-17
-title: "Chapter 3. Linear Regression (1) - 선형 기저 함수 모델"
+title: "[PRML] Chapter 3. Linear Regression (1) - 선형 기저 함수 모델"
 categories: 
-  - 머신러닝과 패턴인식
+  - 패턴인식과 머신러닝
 tags: 
   - 머신러닝
   - 패턴인식

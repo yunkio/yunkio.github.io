@@ -1,8 +1,8 @@
 ---
 date: 2021-09-30
-title: "Chapter 2. Probability Distribution (1) - 이산 확률 변수"
+title: "[PRML] Chapter 2. Probability Distribution (1) - 이산 확률 변수"
 categories: 
-  - 머신러닝과 패턴인식
+  - 패턴인식과 머신러닝
 tags: 
   - 머신러닝
   - 패턴인식
