@@ -1,171 +1,29 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	  	  
-<!-- www.check-domains.com sitemap generator -->
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for post in site.posts %}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      {% if post.lastmod == null %}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+      {% endif %}
 
-<url>
-   <loc>https://yunkio.github.io/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/page2/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/feed.xml</loc>
-   <lastmod>2021-11-08T04:53:43+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/categories/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/tags/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/year-archive/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/paper%20review/paper-Image-to-Image_Translation_with_Conditional_Adversarial_Networks/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/paper%20review/paper-Multimodal_Transformer_for_Unaligned_Multimodal_Language_Sequences/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/paper%20review/paper-Multi-Sensor_Fault_Detection,Identification,Isolation_and_Health_Forecasting_for_Autonomous_Vehicles-%EB%B3%B5%EC%82%AC%EB%B3%B8/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/paper%20review/paper-A_Fault_Detection_and_Diagnosis_System_for_Autonomous_Vehicles_Based_on_Hybrid_Approaches/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%EC%8B%9C%EC%9E%91%ED%95%98%EC%84%B8%EC%9A%94!%20%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%202.0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Tensorflow-chapter7-RNN/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter3-linear-regression(3)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%EC%8B%9C%EC%9E%91%ED%95%98%EC%84%B8%EC%9A%94!%20%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%202.0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Tensorflow-chapter6-CNN/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter3-linear-regression(2)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter3-linear-regression(1)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%EC%8B%9C%EC%9E%91%ED%95%98%EC%84%B8%EC%9A%94!%20%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%202.0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Tensorflow-chapter5-classification/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%EC%8B%9C%EC%9E%91%ED%95%98%EC%84%B8%EC%9A%94!%20%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%202.0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Tensorflow-chapter4-regression/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter2-probability-distribution(5)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter2-probability-distribution(4)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter2-probability-distribution(3)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter2-probability-distribution(2)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter2-probability-distribution(1)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%EC%8B%9C%EC%9E%91%ED%95%98%EC%84%B8%EC%9A%94!%20%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%202.0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Tensorflow-chapter3-starting_tensorflow(1)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter1-introduction(4)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter1-introduction(3)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter1-introduction(2)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
-<url>
-   <loc>https://yunkio.github.io/%ED%8C%A8%ED%84%B4%EC%9D%B8%EC%8B%9D%EA%B3%BC%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/PRML-chapter1-introduction(1)/</loc>
-   <lastmod>2021-11-07T16:24:02+00:00</lastmod>
-   <changefreq>always</changefreq>
-   <priority>0.9</priority>
-</url>
+      {% if post.sitemap.changefreq == null %}
+        <changefreq>weekly</changefreq>
+      {% else %}
+        <changefreq>{{ post.sitemap.changefreq }}</changefreq>
+      {% endif %}
+
+      {% if post.sitemap.priority == null %}
+          <priority>0.5</priority>
+      {% else %}
+        <priority>{{ post.sitemap.priority }}</priority>
+      {% endif %}
+
+    </url>
+  {% endfor %}
 </urlset>
