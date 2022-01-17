@@ -1,11 +1,11 @@
 ---
-date: 2021-12-08
-title: "[Paper Review] Fault Diagnosis of an Autonomous Vehicle With an Improved SVM Algorithm Subject to Unbalanced Datasets"
+date: 2021-01-17
+title: "[Paper Review] Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress"
 categories: 
   - Paper Review
 tags: 
-  - 딥러닝
-  - Fault Detection
+  - Time Series
+  - Anomaly Detection
   - 논문 리뷰
 toc: true  
 toc_sticky: true 
