@@ -6,11 +6,10 @@ categories:
 tags: 
   - Time Series
   - Representation Learning
+  - Contrastive Learning
 toc: true  
 toc_sticky: true 
 ---
-
-
 # Paper contents
 
 TS2Vec: Towards Universal Representation of Time Series
