@@ -1,5 +1,4 @@
 ---
-layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -13,13 +12,13 @@ layout: null
       {% endif %}
 
       {% if post.sitemap.changefreq == null %}
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
       {% else %}
         <changefreq>{{ post.sitemap.changefreq }}</changefreq>
       {% endif %}
 
       {% if post.sitemap.priority == null %}
-          <priority>0.5</priority>
+          <priority>1.0</priority>
       {% else %}
         <priority>{{ post.sitemap.priority }}</priority>
       {% endif %}
