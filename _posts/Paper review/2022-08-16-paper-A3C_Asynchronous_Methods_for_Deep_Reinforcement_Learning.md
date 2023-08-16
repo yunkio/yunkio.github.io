@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true 
 ---
 
-# Paper contents
+## Reference
 
 Asynchronous Methods for Deep Reinforcement Learning
 

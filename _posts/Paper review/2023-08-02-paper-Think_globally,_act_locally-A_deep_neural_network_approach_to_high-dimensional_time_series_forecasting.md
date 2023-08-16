@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true 
 ---
 
-# Paper contents
+## Reference
 
 Think globally, act locally: A deep neural network approach to high-dimensional time series forecasting
 

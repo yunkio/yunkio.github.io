@@ -10,7 +10,7 @@ toc: true
 toc_sticky: true 
 ---
 
-# Paper contents
+## Reference
 
 Adversarially Learned Anomaly Detection
 

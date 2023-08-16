@@ -12,7 +12,7 @@ toc: true
 toc_sticky: true 
 ---
 
-# Paper contents
+## Reference
 
 A Fault Detection and Diagnosis System for Autonomous Vehicles Based on Hybrid Approaches
 

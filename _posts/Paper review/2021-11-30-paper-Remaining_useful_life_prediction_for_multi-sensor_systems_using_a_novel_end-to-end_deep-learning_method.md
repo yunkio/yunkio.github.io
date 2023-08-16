@@ -10,7 +10,7 @@ tags:
 toc: true  
 toc_sticky: true 
 ---
-# Paper contents
+## Reference
 
 Remaining useful life prediction for multi-sensor systems using a novel end-to-end deep-learning method
 

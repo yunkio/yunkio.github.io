@@ -10,7 +10,7 @@ tags:
 toc: true  
 toc_sticky: true 
 ---
-# Paper contents
+## Reference
 
 Image-to-Image Translation with Conditional Adversarial Networks
 

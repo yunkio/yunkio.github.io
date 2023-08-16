@@ -10,7 +10,7 @@ tags:
 toc: true  
 toc_sticky: true 
 ---
-# Paper contents
+## Reference
 
 TS2Vec: Towards Universal Representation of Time Series
 

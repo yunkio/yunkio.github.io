@@ -10,7 +10,7 @@ tags:
 toc: true  
 toc_sticky: true 
 ---
-# Paper contents
+## Reference
 
 A Simple Framework for Contrastive Learning of Visual Representations
 

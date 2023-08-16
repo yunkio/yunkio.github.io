@@ -8,7 +8,7 @@ tags:
 toc: true  
 toc_sticky: true 
 ---
-# Paper contents
+## Reference
 
 Temporal regularized matrix factorization for high-dimensional time series prediction.
 

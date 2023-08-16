@@ -10,7 +10,7 @@ tags:
 toc: true  
 toc_sticky: true 
 ---
-# Paper contents
+## Reference
 
 Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress
 

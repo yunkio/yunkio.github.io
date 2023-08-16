@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true 
 ---
 
-# Paper contents
+## Reference
 
 Neural transformation learning for deep anomaly detection beyond images
 

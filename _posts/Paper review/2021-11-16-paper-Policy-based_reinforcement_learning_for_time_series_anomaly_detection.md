@@ -1,5 +1,5 @@
 ---
-date: 2021-11-11
+date: 2021-11-16
 title: "[Paper Review] Policy-based reinforcement learning for time series anomaly detection"
 categories: 
   - Paper Review
@@ -12,7 +12,7 @@ toc: true
 toc_sticky: true 
 ---
 
-# Paper contents
+## Reference
 
 Policy-based reinforcement learning for time series anomaly detection
 

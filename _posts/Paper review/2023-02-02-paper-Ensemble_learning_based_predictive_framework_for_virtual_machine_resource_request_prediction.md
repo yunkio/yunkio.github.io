@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true 
 ---
 
-# Paper contents
+## Reference
 
 Ensemble learning based predictive framework for virtual machine resource request prediction 
 
