@@ -10,13 +10,13 @@ toc_sticky: true
 ---
 ## Reference
 
-Sparse one-dimensional convolutional neural network-based feature learning for fault detection and diagnosis in multivariable manufacturing processes
+Residual attention convolutional autoencoder for feature learning and fault detection in nonlinear industrial processes
 
-Yu, J., Zhang, C., & Wang, S.
+Liu, X., Yu, J., & Ye, L.
 
-Neural Computing and Applications (2022)
+Neural Computing and Applications (2021)
 
-https://link.springer.com/article/10.1007/s00521-021-06575-6
+https://link.springer.com/article/10.1007/s00521-021-05919-6
 
 ## Motivation
 
