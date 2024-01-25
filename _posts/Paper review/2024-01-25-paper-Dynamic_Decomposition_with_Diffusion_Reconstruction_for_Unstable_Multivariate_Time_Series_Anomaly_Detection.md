@@ -29,29 +29,35 @@ https://openreview.net/forum?id=aW5bSuduF1
 
 Figure 1. The architecture of D3R mainly consists of two modules: dynamic decomposition and diffusion reconstruction.
 {: style="text-align: center; font-size:0.7em;"}
-![image](https://github.com/ML4ITS/mtad-gat-pytorch/assets/35906602/db62d218-ac12-4655-9225-19c6e57f3cee
 
 D3R의 구조는 크게 **dynamic decomposition module** 과 **diffusion reconstruction module** 로 구성됩니다. **dynamic decomposition module**은 데이터 인코더와 시간 인코더를 사용하여 데이터와 시간 특징을 모델링합니다. 그런 다음 안정적인 구성 요소를 추출하기 위해 쌓인 분해 블록을 사용하고 offset subtraction을 통해 트렌드 구성 요소를 도출합니다. 반면에 **diffusion reconstruction module**은 외부에서 정보 병목을 구축하기 위해 noise diffusion을 사용합니다. 백본 네트워크를 사용하여 오염된 데이터를 재구성하며, 재구성 오는 이상 점수로 사용됩니다. 데이터 인코더와 재구성 백본 네트워크 모두 시간적 및 차원 의존성을 모델링하기 위해 쌓인 공간-시간 트랜스프모 블록을 포함합니다. 또한 모델의 강건성을 높이기 위해 훈련 중에 disturbance 전략을 사용합니다.
 
 ### Data Preprocessing
 
-**Time stamp hardembedding** 1차원으로 구성된 timestamp를 5차원으로 재구성하며, 각 차원은 각각 minute of the hour, hour of the day, day of the week, day of the month, month of the year을 의미합니다.
+**Time stamp hardembedding** 
+1차원으로 구성된 timestamp를 5차원으로 재구성하며, 각 차원은 각각 minute of the hour, hour of the day, day of the week, day of the month, month of the year을 의미합니다.
 
-**Labeled stable component construction** 트렌드를 추출하기 위해 moving average를 사용하며, 이를 통해 라벨이 달린 stable component $S=X-T$를 얻을 수 있습니다. 이렇게 라벨이 된 stable component를 통해 훈련 데이터가 불안정할 때 발생할 수 있는 훈련 방해를 어느정도 방지할 수 있습니다.
+**Labeled stable component construction** 
+트렌드를 추출하기 위해 moving average를 사용하며, 이를 통해 라벨이 달린 stable component $S=X-T$를 얻을 수 있습니다. 이렇게 라벨이 된 stable component를 통해 훈련 데이터가 불안정할 때 발생할 수 있는 훈련 방해를 어느정도 방지할 수 있습니다.
 
-**Disturbance Strategy** 모델의 강건성을 위해 훈련 데이터의 각 변수에 $[-p, p]$의 uniform distribution을 vertical drift로 적용합니다.
+**Disturbance Strategy** 
+모델의 강건성을 위해 훈련 데이터의 각 변수에 $[-p, p]$의 uniform distribution을 vertical drift로 적용합니다.
 
 ### Dynamic Decomposition
 
 Dynamic decomposition module은 크게 4개의 구성요소로 이루어집니다. 
 
-**Data encoder** 시간적 및 차원적 의존성을 포착하기 위해 spatio-temporal transformer 블록을 기반으로 구현되며, 이는 모델 내에서 $d_\text{model}$이라는 은닉 상태 차원을 가지는 $\mathbb{R}^{n×d_\text{model}}$ 형태의 $H_\text{data}$ 출력을 생성합니다
+**Data encoder** 
+시간적 및 차원적 의존성을 포착하기 위해 spatio-temporal transformer 블록을 기반으로 구현되며, 이는 모델 내에서 $d_\text{model}$이라는 은닉 상태 차원을 가지는 $\mathbb{R}^{n×d_\text{model}}$ 형태의 $H_\text{data}$ 출력을 생성합니다
 
-**Time encoder** temporal trasnformer로만 구성되어 있으며, 이를 통해 모델은 시점의 $H_\text{data} \in \mathbb{R}^{n×d_\text{model}}$ 형태의 시간적 correlation을 얻을 수 있습니다.
+**Time encoder** 
+temporal trasnformer로만 구성되어 있으며, 이를 통해 모델은 시점의 $H_\text{data} \in \mathbb{R}^{n×d_\text{model}}$ 형태의 시간적 correlation을 얻을 수 있습니다.
 
-**Stacked decomposition blocks** Stacked decomposition blocks로 이루어진 Data-time mix-attention을 통해 stable component $\hat{S} \in \mathbb{R}^{n×k}$를 얻습니다.
+**Stacked decomposition blocks** 
+Stacked decomposition blocks로 이루어진 Data-time mix-attention을 통해 stable component $\hat{S} \in \mathbb{R}^{n×k}$를 얻습니다.
 
-**offset subtraction** Horizontal drift를 해결하기 위해 offset subtraction을 통해 $\hat{T}_d\in \mathbb{R}^{n×k}$를 출력합니다.
+**offset subtraction** 
+Horizontal drift를 해결하기 위해 offset subtraction을 통해 $\hat{T}_d\in \mathbb{R}^{n×k}$를 출력합니다.
 
 ### Diffusion reconstruction
 

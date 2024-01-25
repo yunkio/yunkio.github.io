@@ -27,8 +27,7 @@ https://arxiv.org/abs/2312.02530
 
 ## Proposed Method
 
-!![image](https://github.com/yunkio/SSL_Tutorial/assets/35906602/9b689061-e1ab-4466-8411-8e7b3eaaa2bb)
-{: width="600"}{: .align-center} 
+!![image](https://github.com/yunkio/SSL_Tutorial/assets/35906602/9b689061-e1ab-4466-8411-8e7b3eaaa2bb){: width="600"}{: .align-center} 
 
 Figure 1: Illustration of proposed MEMTO.
 {: style="text-align: center; font-size:0.7em;"}
